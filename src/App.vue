@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="red lighten-5"
       dark
     >
       <div class="d-flex align-center">
@@ -10,34 +10,20 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="https://gisoft.vn/images/gi-icon.png"
           transition="scale-transition"
-          width="40"
+          width="50"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <a href="http://" id="gi-link">
+          <h1>GI Software</h1>
+        </a>
       </div>
 
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
 
     <v-main>
+      <SearchBox/>
       <HelloWorld/>
     </v-main>
   </v-app>
@@ -45,12 +31,14 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import SearchBox from './components/SearchBox';
 
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
+    SearchBox
   },
 
   data: () => ({
@@ -58,3 +46,6 @@ export default {
   }),
 };
 </script>
+<style lang="sass">
+  @import './styles/main.sass'
+</style>
