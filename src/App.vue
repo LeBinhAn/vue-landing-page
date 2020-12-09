@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar
       app
-      color="red lighten-5"
+      color="blue lighten-5"
       dark
     >
       <div class="d-flex align-center">
@@ -10,18 +10,17 @@
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://gisoft.vn/images/gi-icon.png"
+          src="./assets/5660d61c-0c05-430f-9bed-fb26c4f31707_200x200.png"
           transition="scale-transition"
-          width="50"
+          width="100"
         />
-        <a href="http://" id="gi-link">
-          <h1>GI Software</h1>
-        </a>
+        
       </div>
-
       <v-spacer></v-spacer>
+      <div id="gi-link">
+          <h1>I made website</h1>
+      </div>
     </v-app-bar>
-
     <v-main>
       <SearchBox/>
       <HelloWorld/>
@@ -46,6 +45,17 @@ export default {
   }),
 };
 </script>
-<style lang="sass">
-  @import './styles/main.sass'
+<style lang="scss">
+  @import './scss/main.scss';
+  #gi-link {
+    text-decoration: none;
+    h1 {
+      color: black;
+      font-family: 'VT323', monospace;
+      font-weight: 200;
+    }
+  }
+  h1 {
+    color: white;
+  }
 </style>

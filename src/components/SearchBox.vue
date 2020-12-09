@@ -1,22 +1,24 @@
 <template>
-    <v-container>
-        <input type="text" placeholder="Search"/>
-        <label for="">{{ label.text }}</label> 
-    </v-container>
+  <v-container>
+    <v-text-field
+     label="Search"
+     placeholder="Search for something?"
+     elevation="2" 
+     solo
+     ></v-text-field>
+  </v-container>
 </template>
 <script>
 export default {
-    name: "SearchBox",
-    data: () => ({
-        label: [
-            {
-                text: "Search",
-                href: "#"
-            },
-        ]
-    }),
-}
-</script>
-<style>
+  name: "SearchBox",
+  data: () => ({
     
+  }),
+};
+</script>
+<style lang="scss">
+.search-btn {
+  color: black !important;
+  background-color: #BBDEFB !important;
+}
 </style>
