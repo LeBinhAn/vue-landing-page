@@ -1,12 +1,13 @@
 <template>
-  <v-container>
+  <v-tool-bar>
     <v-text-field
-      label="Search"
-      placeholder="Search for something?"
-      elevation="2"
-      solo
-    ></v-text-field>
-  </v-container>
+        class="mx-2"
+        label="Search"
+        placeholder="Search for something?"
+        solo
+        hide-details=""
+      ></v-text-field>
+  </v-tool-bar>
 </template>
 <script>
 export default {
@@ -20,8 +21,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.search-btn {
-  color: black !important;
-  background-color: #bbdefb !important;
-}
+  .v-input {
+    margin-top: 1em;
+  }
 </style>

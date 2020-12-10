@@ -1,28 +1,20 @@
 <template>
-  <v-app>
-    <v-app-bar
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
       app
-      color="blue lighten-5"
-      dark
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="./assets/5660d61c-0c05-430f-9bed-fb26c4f31707_200x200.png"
-          transition="scale-transition"
-          width="100"
-        />
-        
-      </div>
-      <v-spacer></v-spacer>
-      <div id="gi-link">
-          <h1>I made website</h1>
-      </div>
-    </v-app-bar>
-    <v-main>
+     
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>BinhAnDev</v-toolbar-title>
       <SearchBox/>
+    </v-app-bar>
+
+    <v-main>
       <HelloWorld/>
     </v-main>
   </v-app>
@@ -37,24 +29,14 @@ export default {
 
   components: {
     HelloWorld,
-    SearchBox
+    SearchBox,
   },
-
-  data: () => ({
-    //
-  }),
+  data: () => ({ drawer: null }),
 };
 </script>
 <style lang="scss">
   @import './scss/main.scss';
-  #gi-link {
-    text-decoration: none;
-    h1 {
-      color: black;
-      font-family: 'VT323', monospace;
-      font-weight: 200;
-    }
-  }
+  
   h1 {
     color: white;
   }
