@@ -19,11 +19,11 @@
       </v-col>
 
     </v-row>
-    <v-row>
+    <v-row class="products-list">
       <v-col cols="12">
         <div
-        v-for="product in products" 
-        v-bind:key="product"
+        v-for="product in products"
+        :key="product"
         >
           <div class="">
               <h4 class="">{{ product.name }}</h4>
@@ -63,3 +63,8 @@
     }
   }
 </script>
+<style lang="scss" scoped>
+  .products-list {
+    justify-content: center;
+  }
+</style>
