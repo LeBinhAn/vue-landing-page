@@ -14,70 +14,52 @@
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to My-Vue
         </h1>
-
         <p class="subheading font-weight-regular">
-         
         </p>
       </v-col>
+
     </v-row>
+    <v-row>
+      <v-col cols="12">
+        <div
+        v-for="product in products" 
+        v-bind:key="product"
+        >
+          <div class="">
+              <h4 class="">{{ product.name }}</h4>
+              <p class="">{{ product.description}}</p>
+          </div>
+        </div>
+      </v-col>
+    </v-row>
+
   </v-container>
 </template>
 
 <script>
   export default {
     name: 'HelloWorld',
-
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
+    data () {
+      return {
+        products: []
+      }
+    },
+    mounted () {
+      this.getProducts();
+    },
+    methods: {
+      getProducts: function() {
+        const axios = require("axios");
+        const self = this;
+        axios
+        .get("http://localhost:8080/api.exampleproject.gisoft/products")
+        .then(function(response) {
+          self.products = response.data.data;
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+      }
+    }
   }
 </script>
