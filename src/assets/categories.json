@@ -1,0 +1,19 @@
+{
+  "subCategories": [
+    { "title": "Sub-category 1" },
+    { "title": "Sub-category 2" }
+  ],
+  "title": "Category 1"
+},
+{
+  "subCategories": [{ "title": "Sub-category 3" }],
+  "title": "Category 2"
+},
+{
+  "subCategories": [],
+  "title": "Category 3"
+},
+{
+  "subCategories": [{ "title": "Sub-category 4" }],
+  "title": "Category 4"
+}
