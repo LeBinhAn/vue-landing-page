@@ -1,11 +1,11 @@
 <template>
   <v-tool-bar>
     <v-text-field
-        class="mx-2"
+        class="mx-2 main-search-field"
         label="Search"
         placeholder="Search for something?"
         solo
-        hide-details=""
+        hide-details
       ></v-text-field>
   </v-tool-bar>
 </template>
@@ -21,7 +21,5 @@ export default {
 };
 </script>
 <style lang="scss">
-  .v-input {
-    margin-top: 1em;
-  }
+  @import '../scss/search-box.scss';
 </style>

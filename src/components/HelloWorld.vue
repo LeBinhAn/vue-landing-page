@@ -63,8 +63,6 @@
     }
   }
 </script>
-<style lang="scss" scoped>
-  .products-list {
-    justify-content: center;
-  }
+<style lang="scss">
+  
 </style>
